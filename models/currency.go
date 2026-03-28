@@ -24,6 +24,6 @@ type ExchangeRate struct {
 	TenantID    uint           `json:"tenant_id" gorm:"index;not null;default:1"`
 	USDtoVES    float64        `json:"usd_to_ves" gorm:"column:usd_to_ves;not null"`
 	USDtoCOP    float64        `json:"usd_to_cop" gorm:"column:usd_to_cop;not null"`
-	UpdatedByID uint           `json:"updated_by_id"`
-	UpdatedBy   User           `json:"updated_by" gorm:"foreignKey:UpdatedByID"`
+	UpdatedByID *uint          `json:"updated_by_id"`
+	UpdatedBy   *User          `json:"updated_by,omitempty" gorm:"foreignKey:UpdatedByID"`
 }
