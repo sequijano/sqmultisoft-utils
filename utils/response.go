@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -38,6 +39,7 @@ func NotFound(c *gin.Context, message string) {
 }
 
 func InternalError(c *gin.Context, err error) {
+	log.Printf("[ERROR] %s %s → %v", c.Request.Method, c.Request.URL.Path, err)
 	c.JSON(http.StatusInternalServerError, Response{Success: false, Error: err.Error()})
 }
 
