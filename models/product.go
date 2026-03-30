@@ -19,7 +19,7 @@ type Product struct {
 	BasePrice        float64        `json:"base_price" gorm:"not null"`
 	BaseCurrencyCode string         `json:"base_currency_code" gorm:"size:3;not null"`
 	BasePriceUSD     float64        `json:"base_price_usd" gorm:"default:0"`
-	Stock            int            `json:"stock" gorm:"default:0"`
+	Stock            float64        `json:"stock" gorm:"default:0"`
 	Active           bool           `json:"active" gorm:"default:true"`
 	UnitType         string         `json:"unit_type" gorm:"size:10;not null;default:'unit'"`
 }
