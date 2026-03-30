@@ -6,9 +6,10 @@ import "time"
 type StockMovementReason string
 
 const (
-	StockReasonSale     StockMovementReason = "sale"
-	StockReasonManual   StockMovementReason = "manual"
-	StockReasonCategory StockMovementReason = "category"
+	StockReasonSale       StockMovementReason = "sale"
+	StockReasonManual     StockMovementReason = "manual"
+	StockReasonCategory   StockMovementReason = "category"
+	StockReasonAdjustment StockMovementReason = "adjustment"
 )
 
 // StockMovement records every stock change (deduction or load) for a product.
