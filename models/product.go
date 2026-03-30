@@ -21,6 +21,7 @@ type Product struct {
 	BasePriceUSD     float64        `json:"base_price_usd" gorm:"default:0"`
 	Stock            float64        `json:"stock" gorm:"default:0"`          // existencia de ventas
 	StockPhysical    float64        `json:"stock_physical" gorm:"default:0"` // existencia física
+	CriticalStock    float64        `json:"critical_stock" gorm:"default:0"` // umbral de alerta de bajo stock
 	Active           bool           `json:"active" gorm:"default:true"`
 	UnitType         string         `json:"unit_type" gorm:"size:10;not null;default:'unit'"`
 }
